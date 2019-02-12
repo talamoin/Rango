@@ -1,23 +1,16 @@
-{% extends 'rango/base.html' %}
-{% load staticfiles %}
-{% block title_block %}
-	About
-{% endblock %}
-{% block body_block %}
-
-		<h1>Rango says ...</h1>
-		<div>
-			here is the about page <br>
-			<strong>{{myvar}}</strong><br>
-
-		</div>
-		<div>This tutorial has been put together by Tala Abd-Alhaleem</div><br>
-		<div>
-			<img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a Cat" />
-			<img src='{{MEDIA_URL}}cat.jpg' alt="Picture of a Cat" />
-			<img src='/media/cat.jpg' alt="Picture of a Cat" />
-			<img src="/media/cat.jpg" alt="Picture of a Cat" />
-			<img src='{% static "images/rangoabout.jpg" %}' alt="Picture of Rango">
-
-		</div>
-{% endblock %}
+<!DOCTYPE html>
+{% load staticfiles %} <!-- New line -->
+<html>
+<head>
+<title>Rango About</title>
+</head>
+<body>
+<strong>{{ Tala }}</strong><br />
+<div>
+<a href="/rango/">Index</a><br />
+     <br/>
+    <img src="{% static "images/rango.jpg" %}" alt="Picture of rango" /> <!-- New line -->
+<img src="{{MEDIA_URL}}cat.jpg"  alt="Picture of a cat" /> <!-- New line -->
+</div>
+</body>
+</html>
